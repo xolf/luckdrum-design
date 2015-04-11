@@ -145,13 +145,14 @@ nav.nav-left{
 }
 nav.nav-left a{
 	@extend .transition-below;
-	transition-duration: 0.6s;
+	transition-duration: 0.3s;
 	display: inline-block;
 	width: 25%;
 	float: left;
 	height: 100px;
 	text-align: center;
 	padding: 3px;
+	text-decoration: none !important;
 }
 nav.nav-left a:hover{
 	background-color: lighten($drum-color, 30%);
@@ -162,9 +163,7 @@ nav.nav-left i{
 	text-align: center;
 }
 nav.nav-left span{
-	display: block;
 	font-size: $font-size;
 	text-align: center;
-	bottom: 0px;
-	position: absolute;
+	width: 100%;
 }
