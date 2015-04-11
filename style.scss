@@ -26,6 +26,7 @@ body{
 	font-family: $font-stack;
 	color: $font-color;
 	font-weight: 400;
+	background-color: $background;
 }
 a{
 	color: $drum-color;
@@ -114,6 +115,9 @@ h1.welcome{
 	color: $drum-color;
 	cursor: pointer;
 }
+.badge{
+	background-color: $drum-color;
+}
 .luckdrum:hover{
 	transform: rotate(360deg);
 	font-size: 110%;
@@ -135,4 +139,32 @@ h1.welcome{
 }
 body.start-body footer{
 	color: #fff;
+}
+nav.nav-left{
+	margin-top: 6%;
+}
+nav.nav-left a{
+	@extend .transition-below;
+	transition-duration: 0.6s;
+	display: inline-block;
+	width: 25%;
+	float: left;
+	height: 100px;
+	text-align: center;
+	padding: 3px;
+}
+nav.nav-left a:hover{
+	background-color: lighten($drum-color, 30%);
+}
+nav.nav-left i{
+	display: block;
+	font-size: $font-size + 10px;
+	text-align: center;
+}
+nav.nav-left span{
+	display: block;
+	font-size: $font-size;
+	text-align: center;
+	bottom: 0px;
+	position: absolute;
 }

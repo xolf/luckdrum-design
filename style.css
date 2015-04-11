@@ -1,5 +1,5 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700);
-.transition-below, input[type=submit], .luckdrum {
+.transition-below, input[type=submit], .luckdrum, nav.nav-left a {
   transition: all 0.5s cubic-bezier(0.61, 0, 0.49, 1) 0s; }
 
 body {
@@ -7,7 +7,8 @@ body {
   padding: 0px;
   font-family: "Open Sans", sans-serif;
   color: #333;
-  font-weight: 400; }
+  font-weight: 400;
+  background-color: #FFF; }
 
 a {
   color: #EA6C6C;
@@ -88,6 +89,9 @@ h1.welcome {
   color: #EA6C6C;
   cursor: pointer; }
 
+.badge {
+  background-color: #EA6C6C; }
+
 .luckdrum:hover {
   transform: rotate(360deg);
   font-size: 110%; }
@@ -108,5 +112,32 @@ h1.welcome {
 
 body.start-body footer {
   color: #fff; }
+
+nav.nav-left {
+  margin-top: 6%; }
+
+nav.nav-left a {
+  transition-duration: 0.6s;
+  display: inline-block;
+  width: 25%;
+  float: left;
+  height: 100px;
+  text-align: center;
+  padding: 3px; }
+
+nav.nav-left a:hover {
+  background-color: #fdf2f2; }
+
+nav.nav-left i {
+  display: block;
+  font-size: 25px;
+  text-align: center; }
+
+nav.nav-left span {
+  display: block;
+  font-size: 15px;
+  text-align: center;
+  bottom: 0px;
+  position: absolute; }
 
 /*# sourceMappingURL=style.css.map */
