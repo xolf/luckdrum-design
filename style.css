@@ -66,6 +66,16 @@ label {
   box-shadow: outset 0px 0px 5px rgba(234, 108, 108, 0.5);
   color: #EA6C6C; }
 
+.small-input {
+  padding: 4px 6px;
+  font-size: 15px; }
+
+.container {
+  padding-top: 50px; }
+
+nav .container {
+  padding-top: 0px; }
+
 .full-width {
   width: 100%; }
 
@@ -119,7 +129,7 @@ nav.nav-left {
 nav.nav-left a {
   transition-duration: 0.3s;
   display: inline-block;
-  width: 25%;
+  width: 33.33333332%;
   float: left;
   height: 100px;
   text-align: center;
@@ -138,5 +148,19 @@ nav.nav-left span {
   font-size: 15px;
   text-align: center;
   width: 100%; }
+
+nav.navbar {
+  background-color: #FFF;
+  margin-bottom: 40px; }
+
+.navbar-toggle {
+  color: #EA6C6C;
+  font-size: 20px; }
+
+.nav > li > a:focus, .nav > li > a:hover {
+  background-color: #FFF; }
+
+.navbar-form input {
+  margin: 0px !important; }
 
 /*# sourceMappingURL=style.css.map */

@@ -13,6 +13,7 @@
     <title>Luckdrum - Log in</title>
 </head>
 <body class="start-body" style="background-image: url(https://farm4.staticflickr.com/3919/14613145488_50c3d4404e_o_d.jpg);">
+	<?php include('nav.html') ?>
 	<div class="container">
 		<h1 class="welcome">Reach your community</h1>
 		<h1 class="welcome">with <span class="luckdrum">LuckDrum</span></h1>

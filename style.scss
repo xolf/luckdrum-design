@@ -91,6 +91,16 @@ label{
 //
 //Classes
 //
+.small-input{
+	padding: 4px 6px;
+	font-size: $font-size;
+}
+.container{
+	padding-top: 50px;
+}
+nav .container{
+	padding-top: 0px;
+}
 .full-width{
 	width: 100%;
 }
@@ -147,7 +157,7 @@ nav.nav-left a{
 	@extend .transition-below;
 	transition-duration: 0.3s;
 	display: inline-block;
-	width: 25%;
+	width: 33.33333332%;
 	float: left;
 	height: 100px;
 	text-align: center;
@@ -166,4 +176,18 @@ nav.nav-left span{
 	font-size: $font-size;
 	text-align: center;
 	width: 100%;
+}
+nav.navbar{
+	background-color: $background;
+	margin-bottom: 40px;
+}
+.navbar-toggle{
+	color: $drum-color;
+	font-size: $font-size + 5px;
+}
+.nav>li>a:focus, .nav>li>a:hover{
+	background-color: $background;
+}
+.navbar-form input{
+	margin: 0px !important;
 }
