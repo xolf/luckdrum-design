@@ -8,6 +8,7 @@ $font-size: 15px;
 $font-color: #333;
 $drum-color: #EA6C6C;
 $background: #FFF;
+$normal-btn: #3498db;
 
 
 //
@@ -224,6 +225,7 @@ nav.navbar{
 }
 .card-row{
 	padding: 20px;
+	background: $background;
 }
 .card .card-img{
 	margin: auto 0px;
@@ -247,4 +249,13 @@ nav.navbar{
 	font-size: $font-size;
 	margin-top: 10px;
 	display: inline-block;
+}
+.card{
+	margin-bottom: 70px;
+}
+.card .read-more{
+	@extend .input-submit;
+	font-size: $font-size - 2px !important;
+	display: inline-block;
+	margin-bottom: 10px;
 }
