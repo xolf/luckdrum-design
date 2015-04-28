@@ -20,7 +20,7 @@
 			<p>LuckDrum helps you actualizing your golas by broadcasting messages to the right people anywhere</p>
 		</div>
 		<div class="col-md-9 choose-opt">
-			<h2>Send a message to your community</h2>
+			<h2>Input example</h2>
 			<form method="post">
 				<div class="input-group">
 					<label for="text">Text</label>
