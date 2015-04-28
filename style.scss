@@ -28,6 +28,9 @@ body{
 	font-weight: 400;
 	background-color: $background;
 }
+label{
+	display: block;
+}
 a{
 	color: $drum-color;
 	text-decoration: none;
@@ -40,7 +43,7 @@ a:active{
 	color: darken($drum-color, 40%);
 	text-decoration: underline;
 }
-input[type=text],input[type=email],input[type=url],input[type=password],input[type=date],input[type=file]{
+input[type=text],input[type=email],input[type=url],input[type=password],input[type=date],input[type=file],textarea{
 	@extend .input-style;
 	background-color: $background;
 	font-family: $font-stack;
@@ -72,8 +75,7 @@ input[type=submit]:hover{
 	font-size: $font-size;
 	padding: 5px;
 }
-
-input[type=radio]{
+input[type=radio],input[type=checkbox]{
 	height: $font-size;
 	width: $font-size;
 }
@@ -87,10 +89,20 @@ label{
 	box-shadow: outset 0px 0px 5px rgba($drum-color, 0.5);
 	color: $drum-color;
 }
+textarea{
+	height: 200px;
+}
 
 //
 //Classes
 //
+.half-width{
+	width: 500px;
+	display: block;
+}
+input[type=file].half-width{
+	width: 320px;
+}
 .small-input{
 	padding: 4px 6px;
 	font-size: $font-size;

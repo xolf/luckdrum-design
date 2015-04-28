@@ -10,6 +10,9 @@ body {
   font-weight: 400;
   background-color: #FFF; }
 
+label {
+  display: block; }
+
 a {
   color: #EA6C6C;
   text-decoration: none; }
@@ -22,7 +25,7 @@ a:active {
   color: #791111;
   text-decoration: underline; }
 
-input[type=text], input[type=email], input[type=url], input[type=password], input[type=date], input[type=file] {
+input[type=text], input[type=email], input[type=url], input[type=password], input[type=date], input[type=file], textarea {
   background-color: #FFF;
   font-family: "Open Sans", sans-serif;
   font-size: 15px;
@@ -52,7 +55,7 @@ input[type=submit]:hover {
   font-size: 15px;
   padding: 5px; }
 
-input[type=radio] {
+input[type=radio], input[type=checkbox] {
   height: 15px;
   width: 15px; }
 
@@ -61,10 +64,20 @@ label {
   font-size: 15px;
   color: #333; }
 
-.input-style:focus, input[type=text]:focus, input[type=email]:focus, input[type=url]:focus, input[type=password]:focus, input[type=date]:focus, input[type=file]:focus {
+.input-style:focus, input[type=text]:focus, input[type=email]:focus, input[type=url]:focus, input[type=password]:focus, input[type=date]:focus, input[type=file]:focus, textarea:focus {
   background-color: #FFF;
   box-shadow: outset 0px 0px 5px rgba(234, 108, 108, 0.5);
   color: #EA6C6C; }
+
+textarea {
+  height: 200px; }
+
+.half-width {
+  width: 500px;
+  display: block; }
+
+input[type=file].half-width {
+  width: 320px; }
 
 .small-input {
   padding: 4px 6px;
