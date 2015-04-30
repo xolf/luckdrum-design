@@ -18,7 +18,7 @@
 		<h1 class="welcome">Reach your community</h1>
 		<h1 class="welcome">with <span class="luckdrum">LuckDrum</span></h1>
 		<p class="desc">Earth's GLOCAL broadcasting drum and message wall</p>
-		<div class="login-container col-md-3">
+		<div class="login-container col-md-4">
 			<h3>Log in</h3>	
 			<input type="text" placeholder="Email" class="full-width">	
 			<input type="password" placeholder="Password" class="full-width">	
@@ -26,7 +26,7 @@
 			<p>You don't have an account?<br><a href="">Sign up</a> now!</p>
 			<p>Lost your password?<br><a href="">Order</a> a new one!</p>
 		</div>
-		<div class="col-md-5 login-fill">
+		<div class="col-md-4 login-fill">
 			
 		</div>
 		<div class="col-md-4 login-fill">

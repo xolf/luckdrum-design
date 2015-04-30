@@ -1,5 +1,5 @@
 		<div class="col-md-3">
-			<nav class="nav-left visible-lg-inline-block">
+			<nav class="nav-left">
 				<a href=""><i class="fa fa-usd"></i>Adverts</a>  
 				<a href=""><i class="fa fa-envelope-o"></i>Receive Message</a>  
 				<a href=""><i class="fa fa-building-o"></i>Business proposals<span class="badge">2</span></a> 

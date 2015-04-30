@@ -1,8 +1,8 @@
-<?php include('head.php'); ?>
+<?php include ('head.php') ?>
 	<?php include('nav.html') ?>
 	<div class="container">
-		<?php include('sidebar.php'); ?>
-		<div class="col-md-5 card-row">
+		<?php include('sidebar.php') ?>
+		<div class="col-md-6 card-row">
 			<article class="card">
 				<img src="http://coding.smashingmagazine.com/wp-content/uploads/2010/04/javascript-code-snippet.gif" alt="Image" class="card-image">
 				<h2>Hey fellows, reminder for the Monday Javascript meeting</h2>
@@ -50,5 +50,6 @@
 				</div>
 			</article>
 		</div>
+		<?php include('sidebar-profil.php') ?>
 	</div>
-<?php include('foot.php'); ?>
+<?php include('foot.php') ?>
