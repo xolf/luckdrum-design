@@ -41,8 +41,7 @@ a:active{
 	color: darken($drum-color, 40%);
 	text-decoration: underline;
 }
-input[type=text],input[type=email],input[type=url],
-input[type=password],input[type=date],input[type=file],textarea{
+input[type=text],input[type=email],input[type=url],input[type=password],input[type=date],input[type=file],textarea{
 	@extend .input-style;
 	background-color: $background;
 	font-family: $font-stack;
@@ -152,7 +151,7 @@ body.start-body p.desc, h1.welcome, .login-fill h1{
 	text-align: center;
 }
 body.start-body p.desc{
-	font-size: $font-size + 5px;;
+	font-size: $font-size + 5px;;	
 }
 h1.welcome{
 	font-size: $font-size + 35px;
