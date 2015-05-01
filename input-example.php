@@ -43,6 +43,6 @@
 			</form>
 		</div>
 	</div>
-	<footer><div class="container">&copy; Luckdrum 2015</div></footer>
+	<?php include('foot.php') ?>
 </body>
 </html>
