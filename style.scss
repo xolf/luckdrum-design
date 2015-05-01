@@ -151,7 +151,7 @@ body.start-body p.desc, h1.welcome, .login-fill h1{
 	text-align: center;
 }
 body.start-body p.desc{
-	font-size: $font-size + 5px;;	
+	font-size: $font-size + 5px;;
 }
 h1.welcome{
 	font-size: $font-size + 35px;
@@ -269,4 +269,14 @@ nav.navbar{
 }
 .sidebar-profil p{
 	font-size: $font-size;
+}
+.tt-menu{
+	width: 100%;
+	background-color: $background;
+	border: 1px solid lighter($drum-color, 30%) !important;
+	padding: 2px;
+}
+.tt-suggestion{
+	padding: 2px;
+	padding-left: 12px;
 }

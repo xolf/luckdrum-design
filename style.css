@@ -238,4 +238,14 @@ nav.navbar {
 .sidebar-profil p {
   font-size: 15px; }
 
+.tt-menu {
+  width: 100%;
+  background-color: #FFF;
+  border: 1px solid lighter(#EA6C6C, 30%) !important;
+  padding: 2px; }
+
+.tt-suggestion {
+  padding: 2px;
+  padding-left: 12px; }
+
 /*# sourceMappingURL=style.css.map */
