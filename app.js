@@ -38,6 +38,11 @@ $( document ).ready(function() {
         'Cook', 'Rogers', 'Morgan', 'Peterson', 'Cooper', 'Reed', 'Bailey'
     ];
 
+    var getInputData = function(data){
+        $.getJSON( 'https://gist.githubusercontent.com/xolf/2fc9efcd1b979d979ae4/raw/1be89cddb2304c1705dfab7ce37bd2963661db10/names.json', function( data ) {
+        return data;
+    };
+
     $('.typeahead').typeahead({
         hint: true,
         highlight: true,
@@ -49,6 +54,6 @@ $( document ).ready(function() {
     });
 
     // console loaded
-    console.log( 'Luckdrum console v' + cnlVersion + ' loaded successfully');
-    console.log( 'Never insert some code you dont know about');
+    console.log( 'Luckdrum console v' + cnlVersion + ' loaded successfully' );
+    console.log( '! ! ! Never insert some code you dont know about ! ! ! ');
 });
