@@ -14,7 +14,7 @@ a {
   color: #EA6C6C;
   text-decoration: none; }
 
-a:hover {
+a:hover, .tt-suggestion:hover {
   color: #d21e1e;
   text-decoration: underline; }
 
@@ -170,7 +170,7 @@ nav.nav-left a {
   padding: 3px;
   text-decoration: none !important; }
 
-nav.nav-left a:hover {
+nav.nav-left a:hover, nav.nav-left .tt-suggestion:hover {
   background-color: #fdf2f2; }
 
 nav.nav-left i {
@@ -191,7 +191,7 @@ nav.navbar {
   color: #EA6C6C;
   font-size: 20px; }
 
-.nav > li > a:focus, .nav > li > a:hover {
+.nav > li > a:focus, .nav > li > a:hover, .nav > li > .tt-suggestion:hover {
   background-color: #FFF; }
 
 .navbar-form input {
@@ -241,11 +241,14 @@ nav.navbar {
 .tt-menu {
   width: 100%;
   background-color: #FFF;
-  border: 1px solid lighter(#EA6C6C, 30%) !important;
   padding: 2px; }
+
+.tt-dataset {
+  border: 1px solid lighter(#EA6C6C, 30%) !important; }
 
 .tt-suggestion {
   padding: 2px;
-  padding-left: 12px; }
+  padding-left: 12px;
+  cursor: pointer; }
 
 /*# sourceMappingURL=style.css.map */

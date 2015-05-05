@@ -273,10 +273,16 @@ nav.navbar{
 .tt-menu{
 	width: 100%;
 	background-color: $background;
-	border: 1px solid lighter($drum-color, 30%) !important;
 	padding: 2px;
+}
+.tt-dataset{
+	border: 1px solid lighter($drum-color, 30%) !important;
 }
 .tt-suggestion{
 	padding: 2px;
 	padding-left: 12px;
+	cursor: pointer;
+}
+.tt-suggestion:hover{
+	@extend a:hover;
 }

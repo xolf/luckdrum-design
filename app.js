@@ -39,9 +39,12 @@ $( document ).ready(function() {
     ];
 
     var getInputData = function(data){
-        $.getJSON( 'https://gist.githubusercontent.com/xolf/2fc9efcd1b979d979ae4/raw/1be89cddb2304c1705dfab7ce37bd2963661db10/names.json', function( data ) {
-        return data;
+        return $.getJSON('https://gist.githubusercontent.com/xolf/2fc9efcd1b979d979ae4/raw/1be89cddb2304c1705dfab7ce37bd2963661db10/names.json');
     };
+
+    var meta = getInputData($('.typeahead').attr('data'));
+
+    console.log(meta);
 
     $('.typeahead').typeahead({
         hint: true,
@@ -50,7 +53,7 @@ $( document ).ready(function() {
     },
     {
         name: 'names',
-        source: substringMatcher(names)
+        source: names
     });
 
     // console loaded
