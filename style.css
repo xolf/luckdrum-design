@@ -105,6 +105,9 @@ nav .container {
   width: 800px;
   display: block; }
 
+.nav-search-input {
+  width: 100%; }
+
 .half-width {
   width: 400px;
   display: block; }

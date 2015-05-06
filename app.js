@@ -38,13 +38,16 @@ $( document ).ready(function() {
         'Cook', 'Rogers', 'Morgan', 'Peterson', 'Cooper', 'Reed', 'Bailey'
     ];
 
-    var getInputData = function(data){
-        return $.getJSON('https://gist.githubusercontent.com/xolf/2fc9efcd1b979d979ae4/raw/1be89cddb2304c1705dfab7ce37bd2963661db10/names.json');
+    var getInputData = function(url){
+        return $.ajax({
+            url: url,
+            success: function( data ) {
+                return returnData = data;
+            }
+        });
     };
 
     var meta = getInputData($('.typeahead').attr('data'));
-
-    console.log(meta);
 
     $('.typeahead').typeahead({
         hint: true,
