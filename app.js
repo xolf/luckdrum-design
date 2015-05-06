@@ -1,4 +1,4 @@
-var cnlVersion = '0.0.2';
+var cnlVersion = '0.0.3';
 $( document ).ready(function() {
     // searches for substrings in a query
     var substringMatcher = function(strs) {
@@ -60,6 +60,10 @@ $( document ).ready(function() {
     });
 
     // console loaded
+    while(i > 50){
+        console.log(' ');
+        i++;
+    }
     console.log( 'Luckdrum console v' + cnlVersion + ' loaded successfully' );
     console.log( '! ! ! Never insert some code you dont know about ! ! ! ');
 });
