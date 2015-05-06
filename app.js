@@ -22,6 +22,17 @@ $( document ).ready(function() {
                 cb(matches);
           };
     };
+    
+    var getMeta = function(url){
+        return $.ajax({
+            dataType: "json",
+            url: url,
+            data: data,
+            success: success
+        });
+    }
+    
+    console.log(getMeta('https://github.com/xolf/Code-Bowl/blob/master/names.js'));
 
     // https://github.com/xolf/Code-Bowl/blob/master/names.js
 
