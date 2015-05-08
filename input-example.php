@@ -5,7 +5,7 @@
 			<h1><span class="luckdrum">Luckdrum</span></h1>
 			<p>LuckDrum helps you actualizing your golas by broadcasting messages to the right people anywhere</p>
 		</div>
-		<div class="col-md-9 choose-opt">
+		<div class="col-md-6 choose-opt">
 			<h2>Input example</h2>
 			<form method="post">
 				<div class="input-group">
@@ -43,7 +43,24 @@
 					<input type="checkbox" name="checkbox2" id="checkbox"> Solution 2<br>
 				</div>
 				<div class="input-group">
-				<input type="submit" value="Submit button">
+					<input type="submit" value="Submit button">
+				</div>
+				<ul class="nav nav-tabs">
+				  	<li role="presentation" class="active panel-pill" id="panel-pill-1"><a>Tab 1</a></li>
+				  	<li role="presentation" class="panel-pill" id="panel-pill-2"><a>Tab 2</a></li>
+				  	<li role="presentation" class="panel-pill" id="panel-pill-3"><a>Tab 3</a></li>
+				</ul>
+				<div class="show-panel">
+					<div class="panel-show" id="panel-show-1">
+						<h1>Panel 1</h1>
+					</div>
+					<div class="panel-show" id="panel-show-2">
+						<h1>Panel 2</h1>
+					</div>
+					<div class="panel-show" id="panel-show-3">
+						<h1>Panel 3</h1>
+					</div>
+				</div>
 			</form>
 		</div>
 	</div>

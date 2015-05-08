@@ -1,5 +1,18 @@
-var cnlVersion = '0.0.3';
+var cnlVersion = '0.0.3', returnAjaxData;
 $( document ).ready(function() {
+
+    $('.panel-show').css('display','none');
+    $('#panel-show-1').css('display','block');
+
+    $('.panel-pill').click(function(){
+        $('.panel-pill').removeClass('active');
+        $(this).addClass('active');
+        panelId = $(this).attr('id');
+        panelId = panelId.replace('panel-pill-','');
+        $('.panel-show').css('display','none');
+        $('#panel-show-' + panelId).css('display','block');
+    });
+
     // searches for substrings in a query
     var substringMatcher = function(strs) {
           return function findMatches(q, cb) {
@@ -23,16 +36,15 @@ $( document ).ready(function() {
           };
     };
     
-    var getMeta = function(url){
-        return $.ajax({
-            dataType: "json",
-            url: url,
-            data: data,
-            success: success
-        });
-    }
+    var getMeta = $.ajax({
+                            async:false,
+                            url: 'https://gist.githubusercontent.com/xolf/2fc9efcd1b979d979ae4/raw/1be89cddb2304c1705dfab7ce37bd2963661db10/names.json',
+                            type:'get',
+                            data:{'GetConfig':'YES'},
+                            dataType:"JSON"
+                        }).responseJSON;
     
-    console.log(getMeta('https://gist.githubusercontent.com/xolf/2fc9efcd1b979d979ae4/raw/1be89cddb2304c1705dfab7ce37bd2963661db10/names.json'));
+    console.log(getMeta);
 
     // https://github.com/xolf/Code-Bowl/blob/master/names.js
 
@@ -60,10 +72,6 @@ $( document ).ready(function() {
     });
 
     // console loaded
-    while(i > 50){
-        console.log(' ');
-        i++;
-    }
     console.log( 'Luckdrum console v' + cnlVersion + ' loaded successfully' );
     console.log( '! ! ! Never insert some code you dont know about ! ! ! ');
 });
