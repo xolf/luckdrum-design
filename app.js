@@ -48,8 +48,6 @@ $( document ).ready(function() {
                             data:{'GetConfig':'YES'},
                             dataType:"JSON"
                         }).responseJSON;
-    
-    console.log(getMeta);
 
     // https://github.com/xolf/Code-Bowl/blob/master/names.js
 
