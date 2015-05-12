@@ -1,5 +1,4 @@
-var cnlVersion = '0.0.3'
-var returnAjaxData;
+var cnlVersion = '0.0.3', returnAjaxData;
 $( document ).ready(function() {
 
     //The Panel part
@@ -42,15 +41,13 @@ $( document ).ready(function() {
           };
     };
     
-    //Fetching data from a json file
     var getMeta = $.ajax({
-                            async: true,
+                            async:false,
                             url: 'https://gist.githubusercontent.com/xolf/2fc9efcd1b979d979ae4/raw/1be89cddb2304c1705dfab7ce37bd2963661db10/names.json',
-                            type: 'get',
-                            data: {'GetConfig':'YES'},
-                            dataType: "JSON"
+                            type:'get',
+                            data:{'GetConfig':'YES'},
+                            dataType:"JSON"
                         }).responseJSON;
-
 
     // https://github.com/xolf/Code-Bowl/blob/master/names.js
 
