@@ -1,6 +1,6 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700);
 @import url(http://fonts.googleapis.com/css?family=Lato:400,300,700);
-.transition-below, input[type=submit], .input-submit, .follow, .card .read-more, .choose-opt li, .luckdrum, nav.nav-left a, nav.nav-left .tt-highlight {
+.transition-below, a, .tt-highlight, input[type=submit], .input-submit, .follow, .card .read-more, .choose-opt li, .luckdrum, nav.nav-left a, nav.nav-left .tt-highlight, .poster a span, .poster .tt-highlight span, .poster a i, .poster .tt-highlight i {
   transition: all 0.5s cubic-bezier(0.61, 0, 0.49, 1) 0s; }
 
 body {
@@ -12,18 +12,25 @@ body {
   background-color: #FFF; }
 
 a, .tt-highlight {
+  transition-duration: 0.2s;
   color: #EA6C6C;
   text-decoration: none; }
+  a .badge, .tt-highlight .badge {
+    background-color: #EA6C6C; }
 
 a:hover, .tt-suggestion:hover, .tt-highlight:hover {
   color: #d21e1e;
   text-decoration: underline; }
+  a:hover .badge, .tt-suggestion:hover .badge, .tt-highlight:hover .badge {
+    background-color: #d21e1e; }
 
 a:active, .tt-highlight:active, a:focus, .tt-highlight:focus {
   color: #791111;
   text-decoration: underline; }
+  a:active .badge, .tt-highlight:active .badge, a:focus .badge, .tt-highlight:focus .badge {
+    background-color: #791111; }
 
-input[type=text], input[type=email], input[type=url], input[type=password], input[type=date], input[type=file], textarea {
+input[type=text], input[type=email], input[type=url], input[type=password], input[type=date], input[type=file], input[type=number], textarea {
   background-color: #FFF;
   font-family: "Lato", "Open Sans", sans-serif;
   font-size: 15px;
@@ -64,10 +71,25 @@ label {
   color: #333;
   display: block; }
 
-.input-style:focus, input[type=text]:focus, input[type=email]:focus, input[type=url]:focus, input[type=password]:focus, input[type=date]:focus, input[type=file]:focus, textarea:focus {
+.input-style:focus, input[type=text]:focus, input[type=email]:focus, input[type=url]:focus, input[type=password]:focus, input[type=date]:focus, input[type=file]:focus, input[type=number]:focus, textarea:focus {
   background-color: #FFF;
   box-shadow: outset 0px 0px 5px rgba(234, 108, 108, 0.5);
   color: #EA6C6C; }
+
+h1 {
+  color: #EA6C6C; }
+
+.alert {
+  font-size: 17px; }
+
+.form-group {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0px;
+  margin-top: 15px; }
+
+.red-color {
+  color: #e74c3c; }
 
 .small-input {
   padding: 4px 6px;
@@ -80,20 +102,45 @@ label {
   padding-top: 50px;
   width: 100%; }
 
-.ld-sidebar p {
-  font-size: 17px;
+.fomr {
+  width: 100%;
+  display: block; }
+
+.ld-sidebar {
   text-align: center; }
 
-.ld-sidebar h1 {
-  text-align: center; }
+.ld-sidebar p {
+  font-size: 17px; }
+
+.ld-sidebar-broadcast {
+  margin-top: 20px; }
+  .ld-sidebar-broadcast a, .ld-sidebar-broadcast .tt-highlight {
+    width: 25%;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    padding: 5px;
+    float: left;
+    font-size: 17px; }
+    .ld-sidebar-broadcast a .badge, .ld-sidebar-broadcast .tt-highlight .badge {
+      width: 100%;
+      margin-top: 3px;
+      margin-bottom: 15px; }
+  .ld-sidebar-broadcast h3 {
+    font-size: 17px;
+    margin: 0px;
+    margin-bottom: 5px; }
 
 .choose-opt li {
   list-style: none !important;
   font-size: 16px;
   padding: 3px; }
-
-.choose-opt li i {
-  padding-right: 5px; }
+  .choose-opt li i {
+    padding-right: 5px; }
+.choose-opt label {
+  display: inline-block;
+  margin-right: 7px;
+  margin-left: 5px; }
 
 nav .container {
   padding-top: 0px; }
@@ -117,7 +164,7 @@ input[type=file].half-width {
   box-shadow: 0px 0px 5px rgba(234, 108, 108, 0.5) inset; }
 
 body.start-body {
-  background: url() no-repeat fixed center center/cover transparent; }
+  background: url("") no-repeat fixed center center/cover transparent; }
 
 body.start-body p.desc, h1.welcome, .login-fill h1 {
   color: #fff;
@@ -153,6 +200,15 @@ h1.welcome {
 
 .login-fill h1 {
   font-size: 30px; }
+
+.btn-facebook {
+  background-color: #3A5795; }
+
+.btn-twitter {
+  background-color: #55acee; }
+
+.btn-google {
+  background-color: #dd4c3a; }
 
 body.start-body footer {
   color: #fff; }
@@ -201,8 +257,9 @@ nav.navbar {
   padding: 20px;
   background: #FFF; }
 
-.card .card-img {
-  margin: auto 0px; }
+.card .card-image {
+  display: block;
+  margin-bottom: 10px; }
 
 .card h2 {
   font-size: 25px;
@@ -231,9 +288,12 @@ nav.navbar {
   display: inline-block;
   margin-bottom: 10px; }
 
+.sidebar-profil, .ld-sidebar {
+  padding: 20px; }
+
 .sidebar-profil {
-  padding: 20px;
-  font-size: 18px; }
+  right: 0px;
+  position: fixed; }
 
 .sidebar-profil p {
   font-size: 15px; }
@@ -244,7 +304,7 @@ nav.navbar {
   padding: 2px; }
 
 .tt-dataset {
-  border: 1px solid lighter(#EA6C6C, 30%) !important; }
+  border: 1px solid #fdf2f2 !important; }
 
 .tt-suggestion {
   padding: 2px;
@@ -253,5 +313,146 @@ nav.navbar {
 
 .panel-pill {
   cursor: pointer; }
+
+.panel-show {
+  margin-top: 10px;
+  margin-bottom: 20px; }
+
+.dropdown .view-more {
+  font-size: 22px; }
+
+.navbar-right li {
+  float: right; }
+
+.navbar-right .dropdown-menu li {
+  float: none; }
+
+#navbar img {
+  width: 40px;
+  height: 40px; }
+
+#navbar li.profile a, #navbar li.profile .tt-highlight {
+  padding: 8px; }
+
+.panel-heading {
+  font-size: 18px; }
+
+.panel {
+  border-radius: 0px; }
+
+textarea.edit-bio {
+  padding: 0px;
+  border: none;
+  box-shadow: none;
+  height: 75px;
+  width: 100%; }
+
+textarea.edit-bio:focus {
+  color: #333; }
+
+.newsbar .panel-body {
+  padding: 0px; }
+  .newsbar .panel-body .list-group-item {
+    border: 0px;
+    border-radius: 0px;
+    cursor: pointer;
+    font-size: 17px; }
+  .newsbar .panel-body .list-group-item:hover {
+    background-color: #F5F5F5; }
+  .newsbar .panel-body a, .newsbar .panel-body .tt-highlight {
+    text-decoration: none; }
+  .newsbar .panel-body .fa {
+    font-size: 20px; }
+
+.poster {
+  padding-top: 20px; }
+  .poster a, .poster .tt-highlight {
+    display: inline-block;
+    width: 25%;
+    float: left;
+    height: 200px;
+    font-size: 0px;
+    text-decoration: none; }
+    .poster a span, .poster .tt-highlight span {
+      transition-duration: 1s;
+      display: none;
+      font-size: 5px;
+      text-align: center;
+      text-decoration: none !important; }
+    .poster a i, .poster .tt-highlight i {
+      font-size: 40px;
+      margin-top: 80px;
+      text-align: center;
+      width: 100%; }
+    .poster a h2, .poster .tt-highlight h2 {
+      text-align: center; }
+  .poster a:hover span, .poster .tt-suggestion:hover span, .poster .tt-highlight:hover span {
+    display: block;
+    font-size: 20px; }
+  .poster a:hover i, .poster .tt-suggestion:hover i, .poster .tt-highlight:hover i {
+    margin-top: 60px;
+    font-size: 30px; }
+  .poster label {
+    font-size: 17px; }
+  .poster #today-goals, .poster input {
+    width: 100%; }
+  .poster #today-goals {
+    font-size: 20px;
+    height: 100px; }
+
+.header-info p {
+  font-size: 20px;
+  font-weight: 300; }
+
+.other-login {
+  width: 100%;
+  display: block;
+  min-height: 30px;
+  margin-bottom: 20px; }
+  .other-login div a, .other-login div .tt-highlight {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    color: #FFFFFF !important;
+    text-decoration: none !important; }
+
+.fa-twitter, .fa-twitter-square {
+  color: #55ACEE; }
+
+.fa-google-plus, .fa-google-plus-square {
+  color: #D73D32; }
+
+.fa-facebook, .fa-facebook-square, .fa-facebook-official {
+  color: #3A5795; }
+
+.fa-spin {
+  animation: 2s cubic-bezier(0.5, 0, 0.5, 1) 0s normal none infinite running fa-spin;
+  webkit-animation: 2s cubic-bezier(0.5, 0, 0.5, 1) 0s normal none infinite running fa-spin; }
+
+.fa-hearth {
+  animation: 1.5s cubic-bezier(0.5, 0, 0.5, 1) 0s normal none infinite running fa-heart;
+  webkit-animation: 1.5s cubic-bezier(0.5, 0, 0.5, 1) 0s normal none infinite running fa-heart; }
+
+@keyframes fa-heart {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1); }
+  50% {
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3); }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1); } }
+@-webkit-keyframes fa-heart {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1); }
+  50% {
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3); }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1); } }
 
 /*# sourceMappingURL=style.css.map */

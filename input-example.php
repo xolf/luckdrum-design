@@ -1,10 +1,7 @@
 <?php include ('head.php') ?>
 	<?php include('nav.html') ?>
 	<div class="container">
-		<div class="col-md-3 ld-sidebar">
-			<h1><span class="luckdrum">Luckdrum</span></h1>
-			<p>LuckDrum helps you actualizing your golas by broadcasting messages to the right people anywhere</p>
-		</div>
+		<?php include('sidebar.php') ?>
 		<div class="col-md-6 choose-opt">
 			<h2>Input example</h2>
 			<form method="post">
@@ -46,13 +43,15 @@
 					<input type="submit" value="Submit button">
 				</div>
 				<ul class="nav nav-tabs">
-				  	<li role="presentation" class="active panel-pill" id="panel-pill-1"><a>Tab 1</a></li>
+				  	<li role="presentation" class="active panel-pill" id="panel-pill-1"><a>Animations</a></li>
 				  	<li role="presentation" class="panel-pill" id="panel-pill-2"><a>Tab 2</a></li>
 				  	<li role="presentation" class="panel-pill" id="panel-pill-3"><a>Tab 3</a></li>
 				</ul>
 				<div class="show-panel">
 					<div class="panel-show" id="panel-show-1">
-						<h1>Panel 1</h1>
+						<h1>Animations</h1>
+						<i class="fa fa-refresh fa-spin fa-5x"></i>
+						<i class="fa fa-heart fa-5x fa-hearth"></i>
 					</div>
 					<div class="panel-show" id="panel-show-2">
 						<h1>Panel 2</h1>

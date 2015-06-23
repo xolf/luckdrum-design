@@ -1,5 +1,5 @@
 var cnlVersion = '0.0.3';
-var returnAjaxData;
+var searchFormJson = 'https://gist.githubusercontent.com/xolf/2fc9efcd1b979d979ae4/raw/1be89cddb2304c1705dfab7ce37bd2963661db10/names.json';
 $( document ).ready(function() {
 
     //The Panel part
@@ -42,38 +42,26 @@ $( document ).ready(function() {
           };
     };
     
-    var getMeta = $.ajax({
-                            async: true,
-                            url: 'https://gist.githubusercontent.com/xolf/2fc9efcd1b979d979ae4/raw/1be89cddb2304c1705dfab7ce37bd2963661db10/names.json',
-                            type:'get',
-                            data:{'GetConfig':'YES'},
-                            dataType:"JSON"
-                        }).responseJSON;
+    //Typeahead nd Bloodhund
+    //
+    var countries = new Bloodhound({
+      datumTokenizer: Bloodhound.tokenizers.whitespace,
+      queryTokenizer: Bloodhound.tokenizers.whitespace,
+      // url points to a json file that contains an array of country names, see
+      // https://github.com/twitter/typeahead.js/blob/gh-pages/data/countries.json
+        remote: {
+            url: searchFormJson
+        }
 
-    // https://github.com/xolf/Code-Bowl/blob/master/names.js
-
-    var names = [
-        'Smith', 'Johnson', 'Williams', 'Brown', 'Jones', 'Miller',
-        'Davis', 'Garcia', 'Rodriguez', 'Wilson', 'Martinez', 'Anderson',
-        'Tylor', 'Thomas', 'Hernandez', 'Moore', 'Martin', 'Jackson',
-        'Thompson', 'White', 'Lopez', 'Lee', 'Gonzalez', 'Harris', 'Clark',
-        'Lewis',  'Robinson', 'Walker', 'Perez', 'Hall', 'Young', 'Allen',
-        'Sanchez', 'Wright', 'King', 'Scott', 'Green', 'Baker', 'Adams',
-        'Nelson', 'Hill', 'Ramirez', 'Campbell', 'Mitchell', 'Roberts',
-        'Carter',  'Phillips',  'Evans', 'Turner', 'Torrs', 'Parker', 'Collins',
-        'Edwards', 'Stewart', 'Flores', 'Morris', 'Nguyen', 'Murphy', 'Rivera',
-        'Cook', 'Rogers', 'Morgan', 'Peterson', 'Cooper', 'Reed', 'Bailey'
-    ];
-
-    $('.typeahead').typeahead({
-        hint: true,
-        highlight: true,
-        minLength: 1
-    },
-    {
-        name: 'names',
-        source: substringMatcher(names)
     });
+     
+    // passing in `null` for the `options` arguments will result in the default
+    // options being used
+    $('.typeahead').typeahead(null, {
+      name: 'countries',
+      source: countries
+    });
+
 
     // console loaded
     console.log( 'Luckdrum console v' + cnlVersion + ' loaded successfully' );
